@@ -1908,7 +1908,7 @@ repository:
       '1': { name: keyword.other.new.cs }
       '2':
         patterns:
-        - include: '#type'
+        - include: '#class-constructor'
     end: (?<=\))
     patterns:
     - include: '#argument-list'
@@ -1937,7 +1937,7 @@ repository:
       '1': { name: keyword.other.new.cs }
       '2':
         patterns:
-        - include: '#type'
+        - include: '#class-constructor'
 
   array-creation-expression:
     begin: |-
@@ -2351,6 +2351,22 @@ repository:
       # '5': ?<type-args> is a sub-expression. It's final value is not considered.
       # '6': ?<tuple> is a sub-expression. It's final value is not considered.
       '7': { name: entity.name.variable.parameter.cs }
+
+  class-constructor:
+    name: meta.class-constructor.cs
+    patterns:
+    - include: '#comment'
+    - include: '#ref-modifier'
+    - include: '#readonly-modifier'
+    - include: '#class-name'
+    - include: '#type-name'
+    - include: '#type-arguments'
+    - include: '#type-array-suffix'
+    - include: '#type-nullable-suffix'
+  
+  class-name:
+    match: (?<!<)[A-Z]+[a-zA-Z0-9]*(?!>)
+    name: entity.name.type.class.cs
 
   type:
     name: meta.type.cs
