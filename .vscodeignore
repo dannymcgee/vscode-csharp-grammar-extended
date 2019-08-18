@@ -1,5 +1,7 @@
 node_modules
+src
 .git
 .gitignore
 *.vsix
 *.psd
+package-lock.json
