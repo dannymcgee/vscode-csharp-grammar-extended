@@ -121,6 +121,7 @@ repository:
     - include: '#array-creation-expression'
     - include: '#anonymous-object-creation-expression'
     - include: '#invocation-expression'
+    - include: '#enum-access-expression'
     - include: '#member-access-expression'
     - include: '#element-access-expression'
     - include: '#cast-expression'
@@ -1835,6 +1836,20 @@ repository:
     end: (?<=\])(?!\s*\[)
     patterns:
     - include: '#bracketed-argument-list'
+
+  enum-access-expression:
+    match: |-
+      (?x)
+      (?>                        # Make it greedy
+        (?<!\.)                  # NOT preceded by a dot
+        (\b[A-Z]+[a-zA-Z0-9]*)   # Pascal case (1)
+        (\.)                     # dot (2)
+        ([A-Z]+[a-zA-Z0-9]*\b)   # Pascal case (3)
+      )(?![.(<])                 # NOT followed by a dot, paren or angle brace
+    captures:
+      '1': { name: entity.name.type.enum.cs }
+      '2': { name: punctuation.accessor.cs }
+      '3': { name: entity.name.variable.enum-member.cs }
 
   member-access-expression:
     patterns:
