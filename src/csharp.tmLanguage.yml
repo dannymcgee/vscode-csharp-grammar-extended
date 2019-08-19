@@ -1892,7 +1892,16 @@ repository:
           \s*\.\s*@?[_[:alpha:]][_[:alnum:]]*
         )
       captures:
-        '1': { name: variable.other.object.cs }
+        '1':
+          patterns:
+          - include: '#variable-name'
+
+  variable-name:
+    patterns:
+    - match: ([A-Z]+[a-zA-Z0-9]*)
+      name: entity.name.class.static.cs
+    - match: ([_a-z]+[_a-zA-Z0-9]*)
+      name: variable.other.object.cs
 
   object-creation-expression:
     patterns:
