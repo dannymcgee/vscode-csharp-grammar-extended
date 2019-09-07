@@ -1,7 +1,7 @@
 {
   "name": "csharp-grammar-extended",
   "displayName": "C# Grammar Extended",
-  "description": "Fixes some issues and adds some new features to VS Code's default C# grammar.",
+  "description": "Aims to improve the default C# grammar that comes with VS Code by making it more accurate and granular.",
   "version": "1.0.0",
   "author": "Danny McGee",
   "publisher": "dannymcgee",
