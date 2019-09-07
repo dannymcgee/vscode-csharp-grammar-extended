@@ -6,6 +6,15 @@
   "author": "Danny McGee",
   "publisher": "dannymcgee",
   "license": "MIT",
+  "icon": "icon.png",
+  "keywords": ["syntax", "C#"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dannymcgee/vscode-csharp-grammar-extended"
+  },
+  "bugs": {
+    "url": "https://github.com/dannymcgee/vscode-csharp-grammar-extended/issues"
+  },
   "engines": {
     "vscode": "*"
   },
