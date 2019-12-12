@@ -10,3 +10,4 @@ This extension aims to improve the default C# grammar that comes with VS Code by
 	* Decimal points are tokenized as punctuation (`punctuation.separator.decimal.cs`)
 	* Type suffixes (e.g., the `f` in `3.141f`) are tokenized as keywords (`keyword.numeric.type.cs`)
 	* Exponent prefixes (e.g., the `e` in `3e10`) are tokenized as keywords (`keyword.numeric.exponent.cs`)
+* Method definitions and invocations receive specific scopes in addition to the generic `entity.name.function.cs` (`meta.definition.method.cs` and `meta.function-call.cs` respectively)
