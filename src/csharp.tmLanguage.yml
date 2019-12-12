@@ -1838,7 +1838,7 @@ repository:
     beginCaptures:
       '1': { name: keyword.operator.null-conditional.cs }
       '2': { name: punctuation.accessor.cs }
-      '3': { name: entity.name.function.cs }
+      '3': { name: meta.function-call.cs entity.name.function.cs }
       '4':
         patterns:
         - include: '#type-arguments'
