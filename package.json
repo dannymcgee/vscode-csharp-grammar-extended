@@ -2,7 +2,7 @@
   "name": "csharp-grammar-extended",
   "displayName": "C# Grammar Extended",
   "description": "Aims to improve the default C# grammar that comes with VS Code by making it more accurate and granular.",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "author": "Danny McGee",
   "publisher": "dannymcgee",
   "license": "MIT",
