@@ -2,12 +2,15 @@
   "name": "csharp-grammar-extended",
   "displayName": "C# Grammar Extended",
   "description": "Aims to improve the default C# grammar that comes with VS Code by making it more accurate and granular.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "Danny McGee",
   "publisher": "dannymcgee",
   "license": "MIT",
   "icon": "icon.png",
-  "keywords": ["syntax", "C#"],
+  "keywords": [
+    "syntax",
+    "C#"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/dannymcgee/vscode-csharp-grammar-extended"
